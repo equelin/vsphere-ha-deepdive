@@ -1,0 +1,11 @@
+{
+    "plugins": [
+        "image-captions"
+    ],
+    "pluginsConfig": {
+        "image-captions": {
+            "caption": "Figure _BOOK_IMAGE_NUMBER_ - _CAPTION_",
+            "align": "left"
+        }
+    }
+}
