@@ -10,5 +10,5 @@
 * [VM and Application Monitoring](vm_and_application_monitoring.md)
 * [Use Case - Stretched Clusters](use_case_-_stretched_clusters.md)
 * [Summarizing](summarizing.md)
-* Introduction to HA
+* [Introduction to HA](introduction_to_ha.md)
 
