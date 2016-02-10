@@ -7,4 +7,5 @@
 * [VM and Application Monitoring](vm_and_application_monitoring.md)
 * [Use Case - Stretched Clusters](use_case_-_stretched_clusters.md)
 * [Summarizing](summarizing.md)
+* Restarting Virtual Machines
 
