@@ -34,11 +34,11 @@ Now that we have briefly touched on it, we would also like to address “restart
 
 ## Restart Retries 
 
-The number of retries is configurable as of vCenter 2.5 U4 with the advanced option “_das.maxvmrestartcount_”. The default value is 5\. Note that the initial restart is included.
+The number of retries is configurable as of vCenter 2.5 U4 with the advanced option “_das.maxvmrestartcount_”. The default value is 5. Note that the initial restart is included.
 
-HA will try to start the virtual machine on one of your hosts in the affected cluster; if this is unsuccessful on that host, the restart count will be increased by 1\. Before we go into the exact timeline, let it be clear that T0 is the point at which the master initiates the first restart attempt. This by itself could be 30 seconds after the virtual machine has failed. The elapsed time between the failure of the virtual machine and the restart, though, will depend on the scenario of the failure, which we will discuss in this chapter.
+HA will try to start the virtual machine on one of your hosts in the affected cluster; if this is unsuccessful on that host, the restart count will be increased by 1. Before we go into the exact timeline, let it be clear that T0 is the point at which the master initiates the first restart attempt. This by itself could be 30 seconds after the virtual machine has failed. The elapsed time between the failure of the virtual machine and the restart, though, will depend on the scenario of the failure, which we will discuss in this chapter.
 
-As said, the default number of restarts is 5\. There are specific times associated with each of these attempts. The following bullet list will clarify this concept. The ‘m’ stands for “minutes” in this list.
+As said, the default number of restarts is 5. There are specific times associated with each of these attempts. The following bullet list will clarify this concept. The ‘m’ stands for “minutes” in this list.
 
 * T0 – Initial Restart
 * T2m – Restart retry 1
@@ -49,6 +49,8 @@ As said, the default number of restarts is 5\. There are specific times associat
 ![](fig17.png "High Availability restart timeline")
 
 As clearly depicted in the diagram above, a successful power-on attempt could take up to ~30 minutes in the case where multiple power-on attempts are unsuccessful. This is, however, not exact science. For instance, there is a 2-minute waiting period between the initial restart and the first restart retry. HA will start the 2-minute wait as soon as it has detected that the initial attempt has failed. So, in reality, T2 could be T2 plus 8 seconds. Another important fact that we want emphasize is that there is no coordination between masters, and so if multiple ones are involved in trying to restart the virtual machine, each will retain their own sequence. Multiple masters could attempt to restart a virtual machine. Although only one will succeed, it might change some of the timelines.
+
+What about VMs which are "disabled" for HA? What will happen with those VMs? Before vSphere 6.0 those VMs would be left alone, as of vSphere 6.0 these VMs will be registered on another host after a failure. This will allow you to easily power-on that VM when needed without needed to manually re-register it yourself. Note, HA will not do a power-on of the VM, it will just register it for you!
 
 Let’s give an example to clarify the scenario in which a master fails during a restart sequence:
 
