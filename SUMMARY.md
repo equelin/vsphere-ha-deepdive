@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* Disclaimer
+* [Disclaimer](disclaimer.md)
 * [About the author](about_the_author.md)
 * [Introduction to HA](introduction_to_ha.md)
 * [Components of HA](components_of_ha.md)
