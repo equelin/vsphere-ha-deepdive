@@ -7,8 +7,6 @@ I wanted to explore the different options there are to create content and share 
 
 Let it be clear that this is a trial, and this may or may not result in a follow up. I am starting with the vSphere High Availability content as that is what I am most familiar with and will be easiest to update.
 
-Now for some formalities, before we dive right in to it. The author of this content works for VMware. The opinion expressed in this publication is the authors’ personal opinion. Content published was not approved in advance by VMware and does not necessarily reflect the view and opinion of VMware. This is the authors’ book, not a VMware book.
-
 A special thanks goes out to everyone who has contributed in any shape or form to this project. First of all Frank Denneman, the person whom I wrote the first 3 versions of the Clustering Deepdive with and who designed all the great diagrams which you find throughout this publication. Of course also: Doug Baer for editing the content in the past and my technical conscious: Keith Farkas, Cormac Hogan, Manoj Krishnan, Anne Holler, Mustafa Uysal and Gabriel Tarasuk-Levin. 
 
 
