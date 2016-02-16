@@ -14,6 +14,8 @@ The first and probably the most important component that forms HA is FDM (Fault 
 
 The FDM Agent is responsible for many tasks such as communicating host resource information, virtual machine states and HA properties to other hosts in the cluster. FDM also handles heartbeat mechanisms, virtual machine placement, virtual machine restarts, logging and much more. We are not going to discuss all of this in-depth separately as we feel that this will complicate things too much.
 
+BLAH
+
 FDM, in our opinion, is one of the most important agents on an ESXi host, when HA is enabled, of course, and we are assuming this is the case. The engineers recognized this importance and added an extra level of resiliency to HA. FDM uses a single-process agent. However, FDM spawns a watchdog process. In the unlikely event of an agent failure, the watchdog functionality will pick up on this and restart the agent to ensure HA functionality remains without anyone ever noticing it failed. The agent is also resilient to network interruptions and “all paths down” (APD) conditions. Inter-host communication automatically uses another communication path (if the host is configured with redundant management networks) in the case of a network failure.
 
 HA has no dependency on DNS as it works with IP addresses only. This is one of the major improvements that FDM brought. This does not mean that ESXi hosts need to be registered with their IP addresses in vCenter; it is still a best practice to register ESXi hosts by its fully qualified domain name
