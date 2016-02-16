@@ -13,4 +13,5 @@
 * [vSphere HA and ...](vsphere_ha_and.md)
 * [Use Case - Stretched Clusters](use_case_-_stretched_clusters.md)
 * [Summarizing](summarizing.md)
+* Disclaimer
 
