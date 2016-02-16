@@ -2,7 +2,7 @@
 
 Although every precaution has been taken in the preparation of this book, the publisher and author assume no responsibility for errors or omissions. Neither is any liability assumed for damages resulting from the use of the information contained herein.
 
-The author of this publication works for VMware. The opinions expressed here is the author's personal opinion. Content published was not approved in advance by VMware and does not necessarily reflect the views and opinion of VMware. This is the author's book, not a VMware.
+The author of this publication works for VMware. The opinions expressed here is the author's personal opinion. Content published was not approved in advance by VMware and does not necessarily reflect the views and opinion of VMware. This is the author's book, not a VMware. 
 
 
 ### Copyrights / Licensing
