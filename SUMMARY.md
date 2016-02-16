@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* Disclaimer
 * [About the author](about_the_author.md)
 * [Introduction to HA](introduction_to_ha.md)
 * [Components of HA](components_of_ha.md)
@@ -13,5 +14,4 @@
 * [vSphere HA and ...](vsphere_ha_and.md)
 * [Use Case - Stretched Clusters](use_case_-_stretched_clusters.md)
 * [Summarizing](summarizing.md)
-* Disclaimer
 
