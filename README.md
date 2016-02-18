@@ -13,7 +13,7 @@ For offline reading, feel free to download this publication in any of the follow
 
 The source of this publication is stored on both [Gitbook](https://www.gitbook.com/book/duncanyb/vsphere-ha-deepdive/details) as well as [Github](https://github.com/duncanyb/vsphere-ha-deepdive). Feel free to submit/contribute where possible and needed. Note that is is also possible to leave feedback on the content by simply clicking on the "+" on the right side of the paragraph you want to comment on (hover over it with your mouse). I will read and incorporate feedback through comments myself as soon as I have time, hence it is useful to check back regularly and validate your downloaded version against the details below.
 
-*vSphere 6.x HA Deepdive, book version: 1.0.1 {{ book.versions }} <br>
+*vSphere 6.x HA Deepdive, book version: {{ book.versions }} <br>
 Book built with GitBook {{ gitbook.version }}*
 
 Thanks for reading, and enjoy!
