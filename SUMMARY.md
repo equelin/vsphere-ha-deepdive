@@ -13,6 +13,6 @@
 * [VM and Application Monitoring](vm_and_application_monitoring.md)
 * [vSphere HA and ...](vsphere_ha_and.md)
 * [Use Case - Stretched Clusters](use_case_-_stretched_clusters.md)
-* [Summarizing](summarizing.md)
 * [Advanced Settings](advanced_settings.md)
+* [Summarizing](summarizing.md)
 
