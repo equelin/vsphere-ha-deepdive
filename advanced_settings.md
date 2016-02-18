@@ -34,7 +34,7 @@ In the Web Client:
 * select the appropriate vCenter Server and click the “Manage” tab
 * click “Settings” and “Advanced Settings”
 
-In this section we will primarily focus on the ones most commonly used, a full detailed list can be found in [KB 2033250](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2033250). Please note that each bullet details the version which supports this advanced setting.
+In this section we will primarily focus on the ones most commonly used, a full detailed list can be found in [KB 2033250](https://kb.vmware.com/kb/2033250). Please note that each bullet details the version which supports this advanced setting.
 
 * das.maskCleanShutdownEnabled - 5.0 only
   * Whether the clean shutdown flag will default to false for an inaccessible and poweredOff VM. Enabling this option will trigger VM failover if the VM's home datastore isn't accessible when it dies or is intentionally powered off.
