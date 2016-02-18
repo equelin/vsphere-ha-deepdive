@@ -54,18 +54,18 @@ In this section we will primarily focus on the ones most commonly used, a full d
   * Enables the use of port group names to control the networks used for VMware HA, where [x] = 0 – ?. You can set the value to be ʺService Console 2ʺ or ʺManagement Networkʺ to use (only) the networks associated with those port group names in the networking configuration.
 * das.bypassNetCompatCheck - 4.1 and prior
   * Disable the “compatible network” check for HA that was introduced with ESX 3.5 Update 2. Disabling this check will enable HA to be configured in a cluster which contains hosts in different subnets, so-called incompatible networks. Default value is “false”; setting it to “true” disables the check.
-das.ignoreRedundantNetWarning - 5.0 and prior
-Remove the error icon/message from your vCenter when you don’t have a redundant Service Console connection. Default value is “false”, setting it to “true” will disable the warning. HA must be reconfigured after setting the option.
-das.vmMemoryMinMB - 5.0 and prior
-The minimum default slot size used for calculating failover capacity. Higher values will reserve more space for failovers. Do not confuse with “das.slotMemInMB”.
-das.slotMemInMB - 5.0 and prior
-Sets the slot size for memory to the specified value. This advanced setting can be used when a virtual machine with a large memory reservation skews the slot size, as this will typically result in an artificially conservative number of available slots.
-das.vmCpuMinMHz - 5.0 and prior
-The minimum default slot size used for calculating failover capacity. Higher values will reserve more space for failovers. Do not confuse with “das.slotCpuInMHz”.
-das.slotCpuInMHz - 5.0 and prior
-Sets the slot size for CPU to the specified value. This advanced setting can be used when a virtual machine with a large CPU reservation skews the slot size, as this will typically result in an artificially conservative number of available slots.
-das.sensorPollingFreq - 4.1 and prior
-Set the time interval for HA status updates. As of vSphere 4.1, the default value of this setting is 10. It can be configured between 1 and 30, but it is not recommended to decrease this value as it might lead to less scalability due to the overhead of the status updates.
+* das.ignoreRedundantNetWarning - 5.0 and prior
+  * Remove the error icon/message from your vCenter when you don’t have a redundant Service Console connection. Default value is “false”, setting it to “true” will disable the warning. HA must be reconfigured after setting the option.
+* das.vmMemoryMinMB - 5.0 and prior
+  * The minimum default slot size used for calculating failover capacity. Higher values will reserve more space for failovers. Do not confuse with “das.slotMemInMB”.
+* das.slotMemInMB - 5.0 and prior
+  * Sets the slot size for memory to the specified value. This advanced setting can be used when a virtual machine with a large memory reservation skews the slot size, as this will typically result in an artificially conservative number of available slots.
+* das.vmCpuMinMHz - 5.0 and prior
+  * The minimum default slot size used for calculating failover capacity. Higher values will reserve more space for failovers. Do not confuse with “das.slotCpuInMHz”.
+* das.slotCpuInMHz - 5.0 and prior
+  * Sets the slot size for CPU to the specified value. This advanced setting can be used when a virtual machine with a large CPU reservation skews the slot size, as this will typically result in an artificially conservative number of available slots.
+* das.sensorPollingFreq - 4.1 and prior
+  * Set the time interval for HA status updates. As of vSphere 4.1, the default value of this setting is 10. It can be configured between 1 and 30, but it is not recommended to decrease this value as it might lead to less scalability due to the overhead of the status updates.
 das.perHostConcurrentFailoversLimit - 5.0 and prior
 By default, HA will issue up to 32 concurrent VM power-ons per host. This setting controls the maximum number of concurrent restarts on a single host. Setting a larger value will allow more VMs to be restarted concurrently but will also increase the average latency to recover as it adds more stress on the hosts and storage.
 das.config.log.maxFileNum - 5.0 only
