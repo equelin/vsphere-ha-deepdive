@@ -1,4 +1,7 @@
 {
+    "variables": {
+               "versions": "1.0.0"
+      }
     "plugins": [
         "image-captions"
     ],
