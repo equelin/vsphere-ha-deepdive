@@ -19,3 +19,6 @@ Duncan Epping<br>
 Chief Technologist<br>
 Storage and Availability - VMware
 
+Modified at {{ file.mtime }}
+Book built with GitBook {{ gitbook.version }}
+
