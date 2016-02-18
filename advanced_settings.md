@@ -36,15 +36,15 @@ In the Web Client:
 
 In this section we will primarily focus on the ones most commonly used, a full detailed list can be found in [KB 2033250](https://kb.vmware.com/kb/2033250). Please note that each bullet details the version which supports this advanced setting.
 
-* das.maskCleanShutdownEnabled - 5.0 only
+* das.maskCleanShutdownEnabled - 5.0, 5.1, 5.5
   * Whether the clean shutdown flag will default to false for an inaccessible and poweredOff VM. Enabling this option will trigger VM failover if the VM's home datastore isn't accessible when it dies or is intentionally powered off.
-* das.ignoreInsufficientHbDatastore - 5.0 only
+* das.ignoreInsufficientHbDatastore - 5.0, 5.1, 5.5, 6.0
   * Suppress the host config issue that the number of heartbeat datastores is less than das.heartbeatDsPerHost. Default value is “false”. Can be configured as “true” or “false”.
-* das.heartbeatDsPerHost - 5.0 only
+* das.heartbeatDsPerHost - 5.0, 5.1, 5.5, 6.0
   * The number of required heartbeat datastores per host. The default value is 2; value should be between 2 and 5.
 * das.failuredetectiontime - 4.1 and prior
   * Number of milliseconds, timeout time, for isolation response action (with a default of 15000 milliseconds). Pre-vSphere 4.0 it was a general best practice to increase the value to 60000 when an active/standby Service Console setup was used. This is no longer needed. For a host with two Service Consoles or a secondary isolation address a failuredetection time of 15000 is recommended.
-* das.isolationaddress[x] - 5.0 and prior
+* das.isolationaddress[x] - 5.0, 5.1, 5.5, 6.0
   * IP address the ESX hosts uses to check on isolation when no heartbeats are received, where [x] = 0 ‐ 9. (see screenshot below for an example) VMware HA will use the default gateway as an isolation address and the provided value as an additional checkpoint. I recommend to add an isolation address when a secondary service console is being used for redundancy purposes.
 * das.usedefaultisolationaddress - 5.0 and prior
   * Value can be “true” or “false” and needs to be set to false in case the default gateway, which is the default isolation address, should not or cannot be used for this purpose. In other words, if the default gateway is a non-pingable address, set the “das.isolationaddress0” to a pingable address and disable the usage of the default gateway by setting this to “false”.
