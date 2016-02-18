@@ -9,9 +9,9 @@ Let it be clear that this is a trial, and this may or may not result in a follow
 
 A special thanks goes out to everyone who has contributed in any shape or form to this project. First of all Frank Denneman, the person whom I wrote the first 3 versions of the Clustering Deepdive with and who designed all the great diagrams which you find throughout this publication. Of course also: Doug Baer for editing the content in the past and my technical conscious: Keith Farkas, Cormac Hogan, Manoj Krishnan, Anne Holler, Mustafa Uysal and Gabriel Tarasuk-Levin. 
 
-For offline reading, feel free to download this publication in any of the following formats: [PDF](https://www.gitbook.com/download/pdf/book/duncanyb/vsphere-ha-deepdive) - [ePub](https://www.gitbook.com/download/epub/book/duncanyb/vsphere-ha-deepdive) - [Mobi](https://www.gitbook.com/download/mobi/book/duncanyb/vsphere-ha-deepdive).
+For offline reading, feel free to download this publication in any of the following formats:<br> [PDF](https://www.gitbook.com/download/pdf/book/duncanyb/vsphere-ha-deepdive) - [ePub](https://www.gitbook.com/download/epub/book/duncanyb/vsphere-ha-deepdive) - [Mobi](https://www.gitbook.com/download/mobi/book/duncanyb/vsphere-ha-deepdive).
 
-The source of this publication is stored on both Gitbook as well as Github. Feel free to submit/contribute where possible and needed. Note that is is also possible to leave feedback on the content by simply clicking on the "+" on the right side of the paragraph you want to comment on (hover over it with your mouse). I will read and incorporate feedback through comments myself as soon as I have time.
+The source of this publication is stored on both [Gitbook](https://www.gitbook.com/book/duncanyb/vsphere-ha-deepdive/details) as well as [Github](https://github.com/duncanyb/vsphere-ha-deepdive). Feel free to submit/contribute where possible and needed. Note that is is also possible to leave feedback on the content by simply clicking on the "+" on the right side of the paragraph you want to comment on (hover over it with your mouse). I will read and incorporate feedback through comments myself as soon as I have time.
 
 Thanks for reading, and enjoy!
 
