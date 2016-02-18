@@ -8,7 +8,9 @@
             "align": "left"
         }
     }
-    "variables": [
+}
+{
+      "variables": {
                "versions": "1.0.0"
-      ]
+      }
 }
