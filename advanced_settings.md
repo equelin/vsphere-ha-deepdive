@@ -46,7 +46,7 @@ In this section we will primarily focus on the ones most commonly used, a full d
   * Number of milliseconds, timeout time, for isolation response action (with a default of 15000 milliseconds). Pre-vSphere 4.0 it was a general best practice to increase the value to 60000 when an active/standby Service Console setup was used. This is no longer needed. For a host with two Service Consoles or a secondary isolation address a failuredetection time of 15000 is recommended.
 * das.isolationaddress[x] - 5.0, 5.1, 5.5, 6.0
   * IP address the ESX hosts uses to check on isolation when no heartbeats are received, where [x] = 0 ‐ 9. (see screenshot below for an example) VMware HA will use the default gateway as an isolation address and the provided value as an additional checkpoint. I recommend to add an isolation address when a secondary service console is being used for redundancy purposes.
-* das.usedefaultisolationaddress - 5.0 and prior
+* das.usedefaultisolationaddress - 5.0, 5.1, 5.5, 6.0
   * Value can be “true” or “false” and needs to be set to false in case the default gateway, which is the default isolation address, should not or cannot be used for this purpose. In other words, if the default gateway is a non-pingable address, set the “das.isolationaddress0” to a pingable address and disable the usage of the default gateway by setting this to “false”.
 * das.isolationShutdownTimeout - 5.0 and prior
   * Time in seconds to wait for a VM to become powered off after initiating a guest shutdown, before forcing a power off.
