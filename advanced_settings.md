@@ -40,20 +40,20 @@ In this section we will primarily focus on the ones most commonly used, a full d
   * Whether the clean shutdown flag will default to false for an inaccessible and poweredOff VM. Enabling this option will trigger VM failover if the VM's home datastore isn't accessible when it dies or is intentionally powered off.
 * das.ignoreInsufficientHbDatastore - 5.0 only
   * Suppress the host config issue that the number of heartbeat datastores is less than das.heartbeatDsPerHost. Default value is “false”. Can be configured as “true” or “false”.
-das.heartbeatDsPerHost - 5.0 only
-The number of required heartbeat datastores per host. The default value is 2; value should be between 2 and 5.
-das.failuredetectiontime - 4.1 and prior
-Number of milliseconds, timeout time, for isolation response action (with a default of 15000 milliseconds). Pre-vSphere 4.0 it was a general best practice to increase the value to 60000 when an active/standby Service Console setup was used. This is no longer needed. For a host with two Service Consoles or a secondary isolation address a failuredetection time of 15000 is recommended.
-das.isolationaddress[x] - 5.0 and prior
-IP address the ESX hosts uses to check on isolation when no heartbeats are received, where [x] = 0 ‐ 9. (see screenshot below for an example) VMware HA will use the default gateway as an isolation address and the provided value as an additional checkpoint. I recommend to add an isolation address when a secondary service console is being used for redundancy purposes.
-das.usedefaultisolationaddress - 5.0 and prior
-Value can be “true” or “false” and needs to be set to false in case the default gateway, which is the default isolation address, should not or cannot be used for this purpose. In other words, if the default gateway is a non-pingable address, set the “das.isolationaddress0” to a pingable address and disable the usage of the default gateway by setting this to “false”.
-das.isolationShutdownTimeout - 5.0 and prior
-Time in seconds to wait for a VM to become powered off after initiating a guest shutdown, before forcing a power off.
-das.allowNetwork[x] - 5.0 and prior
-Enables the use of port group names to control the networks used for VMware HA, where [x] = 0 – ?. You can set the value to be ʺService Console 2ʺ or ʺManagement Networkʺ to use (only) the networks associated with those port group names in the networking configuration.
-das.bypassNetCompatCheck - 4.1 and prior
-Disable the “compatible network” check for HA that was introduced with ESX 3.5 Update 2. Disabling this check will enable HA to be configured in a cluster which contains hosts in different subnets, so-called incompatible networks. Default value is “false”; setting it to “true” disables the check.
+* das.heartbeatDsPerHost - 5.0 only
+  * The number of required heartbeat datastores per host. The default value is 2; value should be between 2 and 5.
+* das.failuredetectiontime - 4.1 and prior
+  * Number of milliseconds, timeout time, for isolation response action (with a default of 15000 milliseconds). Pre-vSphere 4.0 it was a general best practice to increase the value to 60000 when an active/standby Service Console setup was used. This is no longer needed. For a host with two Service Consoles or a secondary isolation address a failuredetection time of 15000 is recommended.
+* das.isolationaddress[x] - 5.0 and prior
+  * IP address the ESX hosts uses to check on isolation when no heartbeats are received, where [x] = 0 ‐ 9. (see screenshot below for an example) VMware HA will use the default gateway as an isolation address and the provided value as an additional checkpoint. I recommend to add an isolation address when a secondary service console is being used for redundancy purposes.
+* das.usedefaultisolationaddress - 5.0 and prior
+  * Value can be “true” or “false” and needs to be set to false in case the default gateway, which is the default isolation address, should not or cannot be used for this purpose. In other words, if the default gateway is a non-pingable address, set the “das.isolationaddress0” to a pingable address and disable the usage of the default gateway by setting this to “false”.
+* das.isolationShutdownTimeout - 5.0 and prior
+  * Time in seconds to wait for a VM to become powered off after initiating a guest shutdown, before forcing a power off.
+* das.allowNetwork[x] - 5.0 and prior
+  * Enables the use of port group names to control the networks used for VMware HA, where [x] = 0 – ?. You can set the value to be ʺService Console 2ʺ or ʺManagement Networkʺ to use (only) the networks associated with those port group names in the networking configuration.
+* das.bypassNetCompatCheck - 4.1 and prior
+  * Disable the “compatible network” check for HA that was introduced with ESX 3.5 Update 2. Disabling this check will enable HA to be configured in a cluster which contains hosts in different subnets, so-called incompatible networks. Default value is “false”; setting it to “true” disables the check.
 das.ignoreRedundantNetWarning - 5.0 and prior
 Remove the error icon/message from your vCenter when you don’t have a redundant Service Console connection. Default value is “false”, setting it to “true” will disable the warning. HA must be reconfigured after setting the option.
 das.vmMemoryMinMB - 5.0 and prior
