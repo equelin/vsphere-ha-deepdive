@@ -65,4 +65,4 @@ First of all, let me mention this, in some cases storage vendors have designed a
 
 > *When a Virtual Volume is created, it is not immediately accessible for IO. To Access Virtual Volumes, vSphere needs to issue a “Bind” operation to a VASA Provider (VP), which creates IO access point for a Virtual Volume on a Protocol Endpoint (PE) chosen by a VP. A single PE can be the IO access point for multiple Virtual Volumes. “Unbind” Operation will remove this IO access point for a given Virtual Volume.*
 
-xx
+*UNDER DEVELOPMENT*
