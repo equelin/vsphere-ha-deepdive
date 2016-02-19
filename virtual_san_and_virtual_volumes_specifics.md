@@ -70,6 +70,6 @@ That is the "Virtual Volumes" implementation aspect, but of course things have a
 * VM Configuration
 * Virtual Machine Disk's
 * Swap File
-* 
+* Snapshot (if there are any)
 
 **BEING WORKED ON - EARLY DRAFT**
