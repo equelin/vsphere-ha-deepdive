@@ -31,7 +31,7 @@ Compared to vSphere 5.0 the changes introduced with vSphere 6.0 for HA appear to
     * HA “Response for Datastore with All Paths Down”
     * HA “Response for Datastore with Permanent Device Loss”
 * Increased host scale – Cluster limit has grown from 32 to 64 hosts
-* Increased VM scale – Cluster limit has grown from X VMs to X VMs per cluster
+* Increased VM scale – Cluster limit has grown from 4000 VMs to 8000 VMs per cluster
 * Secure RPC – Secures the VM/App monitoring channel
 * Full IPv6 support
 * Registration of “HA Disabled” VMs on hosts after failure
