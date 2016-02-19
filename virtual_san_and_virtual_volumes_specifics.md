@@ -72,5 +72,4 @@ That is the "Virtual Volumes" implementation aspect, but of course things have a
 * Swap File
 * 
 
-
-*UNDER DEVELOPMENT*
+**BEING WORKED ON - EARLY DRAFT**
