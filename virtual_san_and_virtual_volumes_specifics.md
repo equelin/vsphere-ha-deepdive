@@ -37,4 +37,5 @@ In this scenario there a network problem has caused a cluster partition. Where a
 
 ## HA and Virtual Volumes
 
-*working on it*
+Let us start with first describing what Virtual Volumes is and what value it brings for an administrator. Virtual Volumes was developed to make your life (vSphere admin) and that of the storage administrator easier. This is done by providing a framework that enables the vSphere administrator to assign policies to virtual machines or virtual disks. In these policies capabilities of the storage array can be defined. These capabilities can be things like snapshotting, deduplication, raid-level, thin / thick provisioning etc. What is offered to the vSphere administrator is up to the Storage administrator, and of course up to what the storage system can offer to begin with. When a virtual machine is deployed and a policy is assigned then the storage system will enable certain functionality of the array based on what was specified in the policy. So no longer a need to assign capabilities to a LUN which holds many VMs, but rather a per VM or even per VMDK level control. So how does this work? Well lets take a look at an architectural diagram first.
+
