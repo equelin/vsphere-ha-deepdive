@@ -63,6 +63,6 @@ Okay, those are the basics, now what about Virtual Volumes and vSphere HA. What 
 
 First of all, let me mention this, in some cases storage vendors have designed a solution where the "vendor provider" isn't designed in an HA fashion (VMware allows for Active/Active, Active/Standby or just "Active" as in a single instance). Make sure to validate what kind of implementation your storage vendor has, as the Vendor Provider needs to be available when powering on VMs. The following quote explains why:
 
-> "When a Virtual Volume is created, it is not immediately accessible for IO. To Access Virtual Volumes, vSphere needs to issue a “Bind” operation to a VASA Provider (VP), which creates IO access point for a Virtual Volume on a Protocol Endpoint (PE) chosen by a VP. A single PE can be the IO access point for multiple Virtual Volumes. “Unbind” Operation will remove this IO access point for a given Virtual Volume."
+> *When a Virtual Volume is created, it is not immediately accessible for IO. To Access Virtual Volumes, vSphere needs to issue a “Bind” operation to a VASA Provider (VP), which creates IO access point for a Virtual Volume on a Protocol Endpoint (PE) chosen by a VP. A single PE can be the IO access point for multiple Virtual Volumes. “Unbind” Operation will remove this IO access point for a given Virtual Volume.*
 
 xx
