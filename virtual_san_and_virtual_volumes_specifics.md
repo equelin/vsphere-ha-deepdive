@@ -74,8 +74,6 @@ That is the "Virtual Volumes" implementation aspect, but of course things have a
 
 Besides these different types of objects, when vSphere HA is enabled there also is a volume used by vSphere HA and this volume will contain all the metadata which is normally stored under "/vmfs/volumes/{Datastore-ID}/.vSphere-HA/{Fault-Domain-ID}/" on regular VMFS. For each Fault Domain a seperate folder will be created in this VVol.
 
-Another thing that changes is the "power-off" file. The power-off file is traditionally stored in the 
-
-There is one change we will need to make for both vVol and vSAN VMs with regard to isolation power-off files. The power-off files that the fdm creates to communicate that it has powered off a VM during an isokation response, currently reside in the .vSphere-HA directory in the root of traditional datastores. As we want this information to be more tightly bound to a VM in a vVol (and also vSAN) environment, we would like these files to be moved from the .vSphere-HA directory to the config vVol that represents the VM itself. This ensures that if an FDM can access the VM, it can access the power-off file associated with it. As it is necessary for both vVol and vSAN, the decision was made to just use this scheme for all datastore types, even VMFS and NFS.
+Another thing that changes is the location of the "power-off" file. The power-off file is traditionally stored in the the FDM folder. In order to ensure that a host can write to a given power-off file for a specific VM the file is now located in the "VM Config" VVol.
 
 **BEING WORKED ON - EARLY DRAFT**
