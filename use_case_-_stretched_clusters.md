@@ -403,11 +403,12 @@ From a storage perspective the VSAN Stretched Cluster is based on FTT=1. This me
 
 When it comes to HA and DRS the configuration is pretty straight forward and has been described in-depth by both Cormac and myself. A couple of things I want to point out in this article as they are configuration details which are easy to forget about.
 
-Make sure to specify additional isolation addresses, one in each site (das.isolationAddress0 – 1).
-Disable the default isolation address if it  can’t be used to validate the state of the environment during a partition (if the gateway isn’t available in both sides).
-Disable Datastore heartbeating, without traditional external storage there is no reason to have this.
-Enable HA Admission Control and make sure it is set to 50% for CPU and Memory.
-Keep VMs local by creating “VM/Host” should rules.
+* Make sure to specify additional isolation addresses, one in each site (das.isolationAddress0 – 1).
+* Disable the default isolation address if it  can’t be used to validate the state of the environment during a partition (if the gateway isn’t available in both sides).
+* Disable Datastore heartbeating, without traditional external storage there is no reason to have this.
+* Enable HA Admission Control and make sure it is set to 50% for CPU and Memory.
+* Keep VMs local by creating “VM/Host” should rules.
+
 And I think that covers most of it, well summarized relatively briefly compared to the excellent document Cormac developed with all details you can wish for. Make sure to read that if you want to know every aspect.
 
 
