@@ -388,8 +388,10 @@ First thing that needs to be looked at is the network. From a Virtual SAN perspe
 * 200ms RTT latency max between data and witness site
 * Both L3 and L2 are supported between the data sites
   * 10Gbps bandwidth is recommended, dependent on the number of VMs this could be lower or higher, more guidance will be provided soon around this!
+  * Multicast required, which means that if L3 is used, some form of multicast routing is needed.
 * L3 is expected between data and the witness sites
   * 100Mbps bandwidth is recommended, dependent on the number of VMs this could be lower or higher, more guidance will be provided soon around this!
+  * No multicast required to the witness site.
 
 **BEING WORKED ON - EARLY DRAFT**
 
