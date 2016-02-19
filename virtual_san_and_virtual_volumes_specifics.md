@@ -76,4 +76,6 @@ Besides these different types of objects, when vSphere HA is enabled there also 
 
 Another thing that changes is the location of the "power-off" file. The power-off file is traditionally stored in the the FDM folder. In order to ensure that a host can write to a given power-off file for a specific VM the file is now located in the "VM Config" VVol.
 
+And finally there are the "heartbeat datastores".
+
 **BEING WORKED ON - EARLY DRAFT**
