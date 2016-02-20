@@ -393,7 +393,7 @@ First thing that needs to be looked at is the network. From a Virtual SAN perspe
   * 100Mbps bandwidth is recommended, dependent on the number of VMs this could be lower or higher, more guidance will be provided soon around this!
   * No multicast required to the witness site.
 
-When it comes to HA and DRS the configuration is pretty straight forward. A couple of things we want to point out as they are configuration details which are easy to forget about. Some are discussed in-depth above, some are settings you actually do no use with VSAN. We will point this out in the list below:
+When it comes to HA and DRS the configuration is pretty straight forward. A couple of things we want to point out as they are configuration details which are easy to forget about. Some are discussed in-depth above, some are settings you actually do not use with VSAN. We will point this out in the list below:
 
 * Make sure to specify additional isolation addresses, one in each site (das.isolationAddress0 – 1).
 * Disable the default isolation address if it  can’t be used to validate the state of the environment during a partition (if the gateway isn’t available in both sides).
