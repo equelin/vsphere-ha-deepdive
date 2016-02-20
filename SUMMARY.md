@@ -15,5 +15,5 @@
 * [Use Case - Stretched Clusters](use_case_-_stretched_clusters.md)
 * [Advanced Settings](advanced_settings.md)
 * [Summarizing](summarizing.md)
-* Changelog
+* [Changelog](changelog.md)
 
