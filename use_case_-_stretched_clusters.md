@@ -401,7 +401,7 @@ When it comes to HA and DRS the configuration is pretty straight forward. A coup
 * Enable HA Admission Control and make sure it is set to 50% for CPU and Memory.
 * Keep VMs local by creating “VM/Host” should rules.
 
-That covers most of it, summarized relatively briefly compared to the excellent document Cormac developed with all details you can wish for. Make sure to read that if you want to know every aspect and angle of a stretched Virtual SAN cluster configuration.
+That covers most of it, summarized relatively briefly compared to the excellent [document](https://www.gitbook.com/book/duncanyb/vsphere-ha-deepdive/edit#) Cormac developed with all details you can wish for. Make sure to read that if you want to know every aspect and angle of a stretched Virtual SAN cluster configuration.
 
 
 
