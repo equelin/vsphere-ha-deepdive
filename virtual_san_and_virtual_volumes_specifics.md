@@ -74,8 +74,6 @@ That is the "Virtual Volumes" implementation aspect, but of course things have a
 
 Besides these different types of objects, when vSphere HA is enabled there also is a volume used by vSphere HA and this volume will contain all the metadata which is normally stored under "```/<root of datastore>/.vSphere-HA/<cluster-specific-directory>/```" on regular VMFS. For each Fault Domain a seperate folder will be created in this VVol.
 
-Another thing that changes is the location of the "power-off" file. The power-off file is traditionally stored in the the FDM folder. In order to ensure that a host can write to a given power-off file for a specific VM the file is now located in the "VM Config" VVol.
-
-And finally there are the "heartbeat datastores".
+Another thing that changes with VVols is Heartbeat Datastores.
 
 **BEING WORKED ON - EARLY DRAFT**
