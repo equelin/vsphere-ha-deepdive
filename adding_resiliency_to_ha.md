@@ -42,7 +42,7 @@ To increase resiliency, we also recommend implementing the following advanced se
 
 Advanced Settings: ```das.isolationaddressX = <ip-address>```
 
-The isolation address setting is discussed in more detail in chapter 4\. In short; it is the IP address that the HA agent pings to identify if the host is completely isolated from the network or just not receiving any heartbeats. If multiple VMkernel networks on different subnets are used, it is recommended to set an isolation address per network to ensure that each of these will be able to validate isolation of the host.
+The isolation address setting is discussed in more detail in the section titled "Fundamental Concepts". In short; it is the IP address that the HA agent pings to identify if the host is completely isolated from the network or just not receiving any heartbeats. If multiple VMkernel networks on different subnets are used, it is recommended to set an isolation address per network to ensure that each of these will be able to validate isolation of the host.
 
 >**Basic design principle:** Take advantage of some of the basic features vSphere has to offer like NIC teaming. Combining different physical NICs will increase overall resiliency of your solution.
 
