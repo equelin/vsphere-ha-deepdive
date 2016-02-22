@@ -82,7 +82,7 @@ When discussing a failed host scenario it is needed to make a distinction betwee
 
 ### The Failure of a Slave
 
-The failure of a slave host is is a fairly complex scenario. Part of this complexity comes from the introduction of a new heartbeat mechanism. Actually, there are two different scenarios: one where heartbeat datastores are configured and one where heartbeat datastores are not configured. Keeping in mind that this is an actual failure of the host, the timeline is as follows:
+The failure of a slave host is a fairly complex scenario. Part of this complexity comes from the introduction of a new heartbeat mechanism. Actually, there are two different scenarios: one where heartbeat datastores are configured and one where heartbeat datastores are not configured. Keeping in mind that this is an actual failure of the host, the timeline is as follows:
 
 * T0 – Slave failure.
 * T3s – Master begins monitoring datastore heartbeats for 15 seconds.
