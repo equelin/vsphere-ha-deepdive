@@ -40,7 +40,7 @@ The following diagram depicts this active/standby scenario:
 
 To increase resiliency, we also recommend implementing the following advanced settings and using NIC ports on different PCI busses – preferably NICs of a different make and model. When using a different make and model, even a driver failure could be mitigated.
 
-Advanced Settings: ```_das.isolationaddressX_ = <ip-address>```
+Advanced Settings: ```das.isolationaddressX = <ip-address>```
 
 The isolation address setting is discussed in more detail in chapter 4\. In short; it is the IP address that the HA agent pings to identify if the host is completely isolated from the network or just not receiving any heartbeats. If multiple VMkernel networks on different subnets are used, it is recommended to set an isolation address per network to ensure that each of these will be able to validate isolation of the host.
 
