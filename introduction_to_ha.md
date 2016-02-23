@@ -26,7 +26,7 @@ Before we dive into the main constructs of HA and describe all the choices one h
 Compared to vSphere 5.0 the changes introduced with vSphere 6.0 for HA appear to be minor. However, some of the new functionality will make the life of many of you much easier. Although the list is relatively short, from an engineering point of view many of these things have been an enormous effort as they required change to the deep fundaments of the HA architecture.
 
 * Support for Virtual Volumes – With Virtual Volumes a new type of storage entity is introduced in vSphere 6.0\. This has also resulted in some changes in the HA architecture to accommodate for this new way of storing virtual machines
-* Support for Virtual SAN – This was actually introduced with vSphere 5.5, but as it is new too many of you and lead to changes in the architecture we decided to include it in this update
+* Support for Virtual SAN – This was actually introduced with vSphere 5.5, but as it is new to many of you and led to changes in the architecture we decided to include it in this update
 * VM Component Protection – This allows HA to respond to a scenario where the connection to the virtual machine’s datastore is impacted temporarily or permanently
     * HA “Response for Datastore with All Paths Down”
     * HA “Response for Datastore with Permanent Device Loss”
