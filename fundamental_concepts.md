@@ -43,7 +43,7 @@ The naming format and location of this file is as follows:
 
 ```/<root of datastore>/.vSphere-HA/<cluster-specific-directory>/protectedlist```
 
-For those wondering how “<cluster-specific-directory>” is constructed:
+For those wondering how “cluster-specific-directory” is constructed:
 
 ```<uuid of vCenter Server>-<number part of the MoID of the cluster>-<random 8 char string>-<name of the host running vCenter Server>```
 
