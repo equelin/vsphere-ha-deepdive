@@ -124,11 +124,11 @@ The selection process gives preference to VMFS over NFS datastores, and seeks to
 
 The question now arises: what, exactly, is this datastore heartbeating and which datastore is used for this heartbeating? Let’s answer which datastore is used for datastore heartbeating first as we can simply show that with a screenshot, see below. vSphere displays extensive details around the “Cluster Status” on the Cluster’s Monitor tab. This for instance shows you which datastores are being used for heartbeating and which hosts are using which specific datastore(s). In addition, it displays how many virtual machines are protected and how many hosts are connected to the master.
 
-![](fig12.png "Validating the heartbeat datastores") 
+![](fig12.png "Validating") 
 
 In block based storage environments HA leverages an existing VMFS file system mechanism. The datastore heartbeat mechanism uses a so called “heartbeat region” which is updated as long as the file is open. On VMFS datastores, HA will simply check whether the heartbeat region has been updated. In order to update a datastore heartbeat region, a host needs to have at least one open file on the volume. HA ensures there is at least one file open on this volume by creating a file specifically for datastore heartbeating. In other words, a per-host file is created on the designated heartbeating datastores, as shown below. The naming scheme for this file is as follows: ```host-number-hb```
 
-![](fig13.png "Heartbeat datastores") 
+![](fig13.png "Datastores used") 
 
 On NFS datastores, each host will write to its heartbeat file once every 5 seconds, ensuring that the master will be able to check host state. The master will simply validate this by checking that the time-stamp of the file changed.
 
