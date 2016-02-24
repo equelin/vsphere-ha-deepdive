@@ -145,7 +145,7 @@ First, consider the administrator’s perspective. Two hosts are considered part
 
 Now, consider the HA perspective. When any HA agent is not in network contact with a master, they will elect a new master. So, when a network partition exists, a master election will occur so that a host failure or network isolation within this partition will result in appropriate action on the impacted virtual machine(s). The screenshot below shows possible ways in which an Isolation or a Partition can occur.
 
-![](fig14.png)
+![](fig14.png "Isolated versus Partitioned")
 
 If a cluster is partitioned in multiple segments, each partition will elect its own master, meaning that if you have 4 partitions your cluster will have 4 masters. When the network partition is corrected, any of the four masters will take over the role and be responsible for the cluster again. It should be noted that a master could claim responsibility for a virtual machine that lives in a different partition. If this occurs and the virtual machine happens to fail, the master will be notified through the datastore communication mechanism.
 
