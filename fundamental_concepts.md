@@ -79,9 +79,7 @@ Both the master and slave use files not only to store state, but also as a commu
 
 The set of powered on virtual machines is stored in a per-host “poweron” file. It should be noted that, because a master also hosts virtual machines, it also creates a “poweron” file.
 
-The naming scheme for this file is as follows:
-
-host-number-poweron
+The naming scheme for this file is as follows: ```host-number-poweron```
 
 Tracking virtual machine power-on state is not the only thing the “poweron” file is used for. This file is also used by the slaves to inform the master that it is isolated from the management network: the top line of the file will either contain a 0 or a 1\. A 0 (zero) means not-isolated and a 1 (one) means isolated. The master will inform vCenter about the isolation of the host.
 
