@@ -149,7 +149,7 @@ _Conservative_ refers to the likelihood that vSphere HA will be able to restart 
 
 If the APD is lifted and access to the storage is restored before the timeout has passed, vSphere HA does not unnecessarily restart the VM unless explicitly configured to do so. If a response is chosen even when the environment has recovered from the APD condition, **Response for APD recovery after APD timeout** can be configured to **Reset VMs**. VMware recommends leaving this setting disabled.
 
-With the release of vSphere 5.5, an advanced setting called **Disk.AutoremoveOnPDL** was introduced. It is implemented by default. This functionality enables vSphere to remove devices that are marked as PDL and helps prevent reaching, for example, the 256-device limit for an ESXi host. However, if the PDL scenario is solved and the device returns, the ESXi host’s storage system must be rescanned before this device appears. VMware recommends disabling **Disk.AutoremoveOnPDL** in the host advanced settings by setting it to **0**.
+With the release of vSphere 5.5, an advanced setting called **Disk.AutoremoveOnPDL** was introduced. It is implemented by default. This functionality enables vSphere to remove devices that are marked as PDL and helps prevent reaching, for example, the 256-device limit for an ESXi host. However, if the PDL scenario is solved and the device returns, the ESXi host’s storage system must be rescanned before this device appears. VMware recommends disabling **Disk.AutoremoveOnPDL** in the host advanced settings by setting it to **0** for vSphere environment using 5.5. For vSphere environments using 6.0 or later this setting should be set to 1 (default value) due to a change in PDL handling behaviour with vSphere 6.0 and higher.
 
 ![](sc_fig_09.png "Disk.AutoremoveOnPDL")
 
@@ -396,6 +396,7 @@ First thing that needs to be looked at is the network. From a Virtual SAN perspe
 When it comes to HA and DRS the configuration is pretty straight forward. A couple of things we want to point out as they are configuration details which are easy to forget about. Some are discussed in-depth above, some are settings you actually do not use with VSAN. We will point this out in the list below:
 
 * Make sure to specify additional isolation addresses, one in each site (das.isolationAddress0 – 1).
+  * Note that you can specify multiple of these, 2 per site or more if you want
 * Disable the default isolation address if it  can’t be used to validate the state of the environment during a partition (if the gateway isn’t available in both sides).
 * Disable Datastore heartbeating, without traditional external storage there is no reason to have this.
 * Enable HA Admission Control and make sure it is set to 50% for CPU and Memory.
