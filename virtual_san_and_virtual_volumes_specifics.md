@@ -86,5 +86,6 @@ All VM related HA files which normally would be under the VM folder, like for in
 
 The power-off file however, which is used to indicate that a VM has been powered-off due to an isolation event, is not stored under the .vSphere-HA folder, but will be stored in the VM config VVol (in the UI exposed as the VVol VM folder) as shown in the screenshot below.
 
-![](vvol-poweroff.png "VVol based power-off file")
+![](vvol-poweroff.png "VVol based poweroff file")
 
+And that explains the differences between traditional storage systems using VMFS / NFS and new storage systems leveraging Virtual Volumes or even a full VSAN based solution.
