@@ -183,7 +183,9 @@ HA triggers a master election process before it will declare a host is isolated.
 * T30s – Slave declares itself isolated
 * T60s – Slave “triggers” isolation response
 
-When the isolation response is triggered HA creates a “power-off” file for any virtual machine HA powers off whose home datastore is accessible. Next it powers off the virtual machine (or shuts down) and updates the host’s poweron file. The power-off file is used to record that HA powered off the virtual machine and so HA should restart it. These power-off files are deleted when a virtual machine is powered back on or HA is disabled.
+When the isolation response is triggered HA creates a “power-off” file for any virtual machine HA powers off whose home datastore is accessible. Next it powers off the virtual machine (or shuts down) and updates the host’s poweron file. The power-off file is used to record that HA powered off the virtual machine and so HA should restart it. These power-off files are deleted when a virtual machine is powered back on or HA is disabled, the below screenshot shows such a power-off file, which in this case is stored in a VVol.
+
+![](vvol-poweroff.png "VVol based poweroff file")
 
 After the completion of this sequence, the master will learn the slave was isolated through the “poweron” file as mentioned earlier, and will restart virtual machines based on the information provided by the slave.
 
