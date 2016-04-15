@@ -88,4 +88,3 @@ The power-off file however, which is used to indicate that a VM has been powered
 
 ![](vvol-poweroff.png "VVol based power-off file")
 
-**BEING WORKED ON - EARLY DRAFT**
