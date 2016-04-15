@@ -37,7 +37,11 @@ In this scenario there a network problem has caused a cluster partition. Where a
 
 ## HA and Virtual Volumes
 
-Let us start with first describing what Virtual Volumes is and what value it brings for an administrator. Virtual Volumes was developed to make your life (vSphere admin) and that of the storage administrator easier. This is done by providing a framework that enables the vSphere administrator to assign policies to virtual machines or virtual disks. In these policies capabilities of the storage array can be defined. These capabilities can be things like snapshotting, deduplication, raid-level, thin / thick provisioning etc. What is offered to the vSphere administrator is up to the Storage administrator, and of course up to what the storage system can offer to begin with. When a virtual machine is deployed and a policy is assigned then the storage system will enable certain functionality of the array based on what was specified in the policy. So no longer a need to assign capabilities to a LUN which holds many VMs, but rather a per VM or even per VMDK level control. So how does this work? Well lets take a look at an architectural diagram first.
+Let us start with first describing what Virtual Volumes is and what value it brings for an administrator. Virtual Volumes was developed to make your life (vSphere admin) and that of the storage administrator easier. This is done by providing a framework that enables the vSphere administrator to assign policies to virtual machines or virtual disks. In these policies capabilities of the storage array can be defined. These capabilities can be things like snapshotting, deduplication, raid-level, thin / thick provisioning etc. What is offered to the vSphere administrator is up to the Storage administrator, and of course up to what the storage system can offer to begin with. In the below screenshot we show an example for instance of some of the capabilities Nimble exposes through policy.
+
+![](vvol-nimble.png "Capabilities exposed by Nimble array")
+
+When a virtual machine is deployed and a policy is assigned then the storage system will enable certain functionality of the array based on what was specified in the policy. So no longer a need to assign capabilities to a LUN which holds many VMs, but rather a per VM or even per VMDK level control. So how does this work? Well lets take a look at an architectural diagram first.
 
 ![](vvol diagram1.png "Virtual Volumes Architecture")
 
@@ -72,10 +76,13 @@ That is the "Virtual Volumes" implementation aspect, but of course things have a
 * Swap File
 * Snapshot (if there are any)
 
-Besides these different types of objects, when vSphere HA is enabled there also is a volume used by vSphere HA and this volume will contain all the metadata which is normally stored under "```/<root of datastore>/.vSphere-HA/<cluster-specific-directory>/```" on regular VMFS. For each Fault Domain a seperate folder will be created in this VVol.
+Besides these different types of objects, when vSphere HA is enabled there also is a volume used by vSphere HA and this volume will contain all the metadata which is normally stored under "```/<root of datastore>/.vSphere-HA/<cluster-specific-directory>/```" on regular VMFS. For each Fault Domain a seperate folder will be created in this VVol as shown in the screenshot below.
 
-All VM related HA files which normally would be under the VM folder, like for instance the power-off file, are now stored in the VM Configuration VVol object. Conceptually speaking similar to regular VMFS, implementation wise however completely different.
+![](vvol-fdm.png "Single FDM cluster on VVol array")
 
-Another thing that changes with VVols is Heartbeat Datastores.
+All VM related HA files which normally would be under the VM folder, like for instance the power-on file, heartbeat files and the protectedlist, are now stored in the VM Configuration VVol object. Conceptually speaking similar to regular VMFS, implementation wise however completely different.
+
+![](vvol-fdm-files.png "VVol FDM files")
+
 
 **BEING WORKED ON - EARLY DRAFT**
