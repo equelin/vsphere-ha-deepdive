@@ -8,3 +8,4 @@
 1.0.6   -   Removed a duplicate section in "Restarting Virtual Machines"<br>
 1.0.7   -   Added new best practice around Disk.autoRemoveOnPDL<br>
 1.0.8   -   Added some details on VVols<br>
+1.0.9   -   Added new screenshot for Isolation Response and changed "Leave powered on" to "Disabled" as per 6.0 UI<br>
