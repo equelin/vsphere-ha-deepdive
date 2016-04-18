@@ -121,11 +121,15 @@ Before we will discuss the timeline and the process around the restart of virtua
 
 ### Isolation Response {#isolation-response}
 
-The Isolation Response refers to the action that HA takes for its virtual machines when the host has lost its connection with the network and the remaining nodes in the cluster. This does not necessarily mean that the whole network is down; it could just be the management network ports of this specific host. Today there are three isolation responses: “Power off”, “Leave powered on” and “Shut down”. This isolation response answers the question, “what should a host do with the virtual machines it manages when it detects that it is isolated from the network?” Let’s discuss these three options more in-depth:
+The Isolation Response (or Host Isolation as it is called in vSphere 6.0) refers to the action that HA takes for its virtual machines when the host has lost its connection with the network and the remaining nodes in the cluster. This does not necessarily mean that the whole network is down; it could just be the management network ports of this specific host. Today there are two isolation responses: “Power off”, and “Shut down”. In previous versions (pre vSphere 6.0) there was also an isolation response called "leave powered on", this has been renamed to "disabled" as "leave powered on" means that there is no response to an isolation event.
 
+![](isolation-response.png "vSphere 6.0 Isolation Response settings")
+
+The isolation response features answers the question, “what should a host do with the virtual machines it manages when it detects that it is isolated from the network?” Let’s discuss these three options more in-depth:
+
+* Disabled (default) – When isolation occurs on the host, the state of the virtual machines remains unchanged.
 * Power off – When isolation occurs, all virtual machines are powered off. It is a hard stop, or to put it bluntly, the “virtual” power cable of the virtual machine will be pulled out!
 * Shut down – When isolation occurs, all virtual machines running on the host will be shut down using a guest-initiated shutdown through VMware Tools. If this is not successful within 5 minutes, a “power off” will be executed. This time out value can be adjusted by setting the advanced option _das.isolationShutdownTimeout_. If VMware Tools is not installed, a “power off” will be initiated immediately.
-* Leave powered on – When isolation occurs on the host, the state of the virtual machines remains unchanged.
 
 This setting can be changed on the cluster settings under virtual machine options.
 
